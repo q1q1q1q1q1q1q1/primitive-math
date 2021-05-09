@@ -26,6 +26,7 @@ class primitiveMath:
 
     def least_common_divisor(self, a: [int, float], b: [int, float]) -> [int, float]:
         """Euclid’s Algorithm"""
+        """bk+1 ≥ bk + bk−1 ≥ Fib(k) + Fib(k − 1) = Fib(k + 1)"""
         while b != 0:
             #copy last result from a%b
             temp: [float, int] = b
