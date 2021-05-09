@@ -5,8 +5,11 @@ class unsigned:
         self.value = value
         assert (self.value > 0 and "the value cannot be less than or equal to zero")
 
+    def __str__(self):
+        return "Unsigned " + (type(self.value))
 
 class primitiveMath:
+    """Newton’s method"""
     def sqrt_make(self, value: [int, float]) -> [int, float]:
         approximation: [int, float] = 1
         accuracy_level: int = 0
@@ -27,6 +30,20 @@ class primitiveMath:
     def least_common_divisor(self, a: [int, float], b: [int, float]) -> [int, float]:
         """Euclid’s Algorithm"""
         """bk+1 ≥ bk + bk−1 ≥ Fib(k) + Fib(k − 1) = Fib(k + 1)"""
+        '''
+        EA:
+        mov eax, ebx
+        div ecx, ebx
+        mov ebx, edx
+        jump main 
+        
+        main:
+        mov ecx, a
+        mov ebx, b
+        cmp ebx, 0
+        jne EA       
+        
+        '''
         while b != 0:
             #copy last result from a%b
             temp: [float, int] = b
