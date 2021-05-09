@@ -35,7 +35,7 @@ class primitiveMath:
         mov eax, ebx
         div ecx, ebx
         mov ebx, edx
-        jump main 
+        jmp main 
         
         main:
         mov ecx, a
