@@ -1,6 +1,5 @@
 
 
-
 class unsigned:
     def __init__(self, value: [int, float]):
         self.value = value
@@ -25,3 +24,11 @@ class primitiveMath:
             lvl += 2
         return value
 
+    def least_common_divisor(self, a: [int, float], b: [int, float]) -> [int, float]:
+        """Euclid’s Algorithm"""
+        while b != 0:
+            #copy last result from a%b
+            temp: [float, int] = b
+            b = a % b
+            a = temp
+        return a
